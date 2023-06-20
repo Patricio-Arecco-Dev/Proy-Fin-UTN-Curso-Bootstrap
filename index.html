@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Importaremos los estilos Bootstrap por medio de CDN-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Dino Place</title>
+  </head>
+
+  <body class="p-0 w-0">
+    <!-- Cabecera -->
+    <header class="container w-auto p-0 w-0">
+      <div class="row d-flex justify-content-center align-items-center p-0 w-0">
+        <img
+          class="col-xs-2 col-sm-2 col-md-2 col-ig-3 p-0 w-0"
+          src="./img/icon/icon0.png"
+          alt="Icono de dinosaurios"
+          class="img-fluid"
+        />
+        <h1
+          class="col-xs-10 col-sm-10 col-md-10 col-ig-9 text-center fw-bold p-0 w-0 "
+        >
+          DinoLandIA
+        </h1>
+      </div>
+    </header>
+
+    <!-- Menu fijo -->
+    <nav class="container-fluid sticky-top bg-dark">
+      <div class="row">
+        <div class="dropdown">
+          <button
+            class="btn btn-secondary dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Atajos
+          </button>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="#tarjeta1">Dino Profesiones</a>
+            </li>
+            <li><a class="dropdown-item" href="#tarjeta2">Dino Zodiaco</a></li>
+            <li><a class="dropdown-item" href="#tarjeta3">Dino Músicos</a></li>
+            <li>
+              <a class="dropdown-item" href="#tarjeta4">Dino Deportistas</a>
+            </li>
+            <li><a class="dropdown-item" href="#tarjeta5">Dino Amor</a></li>
+            <li><a class="dropdown-item" href="#tarjeta6">Dino Varios</a></li>
+            <li><a class="dropdown-item" href="#formulario">Formulario</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container-fluid" id="main">
+      <!-- Carrusel -->
+      <section class="row m-3">
+        <div id="carrusel1" class="carousel slide" data-bs-ride="carousel">
+          <!-- Indicadores, puntos debajo de la imagen -->
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carrusel1"
+              data-bs-slide-to="0"
+              class="active"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carrusel1"
+              data-bs-slide-to="1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carrusel1"
+              data-bs-slide-to="2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carrusel1"
+              data-bs-slide-to="3"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carrusel1"
+              data-bs-slide-to="4"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carrusel1"
+              data-bs-slide-to="5"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carrusel1"
+              data-bs-slide-to="6"
+            ></button>
+          </div>
+          <!-- sección de las imágenes -->
+          <div class="carousel-item active">
+            <img
+              src="./img/carrusel/carrusel1.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./img/carrusel/carrusel2.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./img/carrusel/carrusel3.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./img/carrusel/carrusel4.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./img/carrusel/carrusel5.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./img/carrusel/carrusel6.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./img/carrusel/carrusel7.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+
+          <!-- Botones derecha e izquierda -->
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carrusel1"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carrusel1"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+      </section>
+
+      <section class="row gap-3">
+        <div
+          class="col-xs-12 col-sm-5 col-md-5 col-ig-3 card p-2 mx-auto"
+          id="tarjeta1"
+        >
+          <img src="./img/profesion/0profesion.jpg" alt="" />
+          <h3 class="text-center m-3 text-white">Dino Profesiones</h3>
+          <button class="btn btn-primary">Ver</button>
+        </div>
+        <div
+          class="col-xs-12 col-sm-5 col-md-5 col-ig-3 card p-2 mx-auto"
+          id="tarjeta2"
+        >
+          <img src="./img/signos/0signos.jpg" alt="" />
+          <h3 class="text-center m-3 text-white">Dino Zodiaco</h3>
+          <button class="btn btn-primary">Ver</button>
+        </div>
+        <div
+          class="col-xs-12 col-sm-5 col-md-5 col-ig-3 card p-2 mx-auto"
+          id="tarjeta3"
+        >
+          <img src="./img/musicos/0musicos.jpg" alt="" />
+          <h3 class="text-center m-3 text-white">Dino Músicos</h3>
+          <button class="btn btn-primary">Ver</button>
+        </div>
+        <div
+          class="col-xs-12 col-sm-5 col-md-5 col-ig-3 card p-2 mx-auto"
+          id="tarjeta4"
+        >
+          <img src="./img/deportes/0deportes.jpg" alt="" />
+          <h3 class="text-center m-3 text-white">Dino Deportes</h3>
+          <button class="btn btn-primary">Ver</button>
+        </div>
+        <div
+          class="col-xs-12 col-sm-5 col-md-5 col-ig-3 card p-2 mx-auto"
+          id="tarjeta5"
+        >
+          <img src="./img/amor/0amor.jpg" alt="" />
+          <h3 class="text-center m-3 text-white">Dino Amor</h3>
+          <button class="btn btn-primary">Ver</button>
+        </div>
+        <div
+          class="col-xs-12 col-sm-5 col-md-5 col-ig-3 card p-2 mx-auto"
+          id="tarjeta6"
+        >
+          <img src="./img/varios/0varios.jpg" alt="" />
+          <h3 class="text-center m-3 text-white">Dino Varios</h3>
+          <button class="btn btn-primary">Ver</button>
+        </div>
+      </section>
+    </main>
+
+    <form class="container-fluid m-3" id="formulario">
+      <div class="row">
+        <label for="nombre" class="form-label">Nombre: </label>
+        <input type="text" class="form-control" id="nombre" />
+      </div>
+
+      <div class="row">
+        <label for="email" class="form-label">Email address</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          aria-describedby="emailAyuda"
+        />
+        <div id="emailAyuda" class="form-text">
+          Ingrese su email si desea recibir novedades. Garantizamos no
+          compartirlo
+        </div>
+      </div>
+
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+
+    <footer class="container-fluid bg-dark p-0">
+      <div class="row">
+        <div
+          class="col-2 d-flex justify-content-center align-items-center"
+          id="logoFooter"
+        >
+          <img
+            src="./img/footer/icon0.png"
+            alt="Icono de dinosaurios"
+            width="200px"
+            class="img-fluid"
+          />
+        </div>
+        <div
+          class="col-10 p-0 m-0 d-flex justify-content-center align-items-center"
+          id="socialNetworks"
+        >
+          <img
+            src="./img/footer/fone.png"
+            alt="numero telefonico"
+            class="m-3 img-fluid"
+          />
+          <img
+            src="./img/footer/mail.png"
+            alt="correo electronico"
+            class="m-3 img-fluid"
+          />
+          <img
+            src="./img/footer/instagram.png"
+            alt="cuenta de instragram"
+            class="m-3 img-fluid"
+          />
+          <img
+            src="./img/footer/whatsapp.png"
+            alt="numero de whatsapp"
+            class="m-3 img-fluid"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <h2 class="text-white text-center" id="copyrights">
+            Autor: Patricio Arecco.
+          </h2>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Importamos los scripts necesarios para el comportamiento del Sitio -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

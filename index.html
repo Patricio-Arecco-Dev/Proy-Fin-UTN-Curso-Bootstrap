@@ -14,25 +14,26 @@
     <title>Dino Place</title>
   </head>
 
-  <body class="p-0 w-0">
+  <body class="p-0 m-0">
     <!-- Cabecera -->
-    <header class="container w-auto p-0 w-0">
-      <div class="row d-flex justify-content-center align-items-center p-0 w-0">
+    <header class="container-fluid" id="cabecero">
+      <div class="row">
         <img
-          class="col-xs-0 col-sm-0 col-md-2 col-ig-3 p-0 w-0 d-none d-md-block"
+          class="col-xs-0 col-sm-0 col-md-2 col-ig-3 p-0 m-0 d-none d-md-block d-flex justify-content-start align-items-center"
           src="./img/icon/icon0.png"
           alt="Icono de dinosaurios"
           class="img-fluid"
+          id="logo-header"
         />
         <h1
-          class="col-xs-12 col-sm-12 col-md-10 col-ig-9 text-center fw-bold p-0 w-0 "
+          class="col-xs-12 col-sm-12 col-md-10 col-ig-9 text-center fw-bold p-0 m-0 d-flex justify-content-center align-items-center h1-responsive"
         >
           DinoLandIA
         </h1>
       </div>
     </header>
 
-    <!-- Menu fijo -->
+    <!-- Menú fijo -->
     <nav class="container-fluid sticky-top bg-dark">
       <div class="row">
         <div class="dropdown">
@@ -61,9 +62,9 @@
       </div>
     </nav>
 
-    <main class="container-fluid" id="main">
+    <section class="container-fluid" id="carrusel">
       <!-- Carrusel -->
-      <section class="row m-3">
+      <section class="row m-3 d-flex justify-content-center align-items-center">
         <div id="carrusel1" class="carousel slide" data-bs-ride="carousel">
           <!-- Indicadores, puntos debajo de la imagen -->
           <div class="carousel-indicators">
@@ -174,111 +175,228 @@
           </button>
         </div>
       </section>
+    </section>
 
-      <section class="row gap-3">
-        <div
-          class="col-xs-12 col-sm-5 col-md-5 col-ig-3 card p-2 mx-auto"
-          id="tarjeta1"
-        >
-          <img src="./img/profesion/0profesion.jpg" alt="" />
-          <h3 class="text-center m-3 text-white">Dino Profesiones</h3>
-          <button class="btn btn-primary">Ver</button>
+    <main class="container-fluid" id="main">
+      <section
+        class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-ig-3 g-4"
+      >
+        <div class="col" id="tarjeta1">
+          <div class="card">
+            <img
+              class="img-fluid card-imf-top"
+              src="./img/profesion/0profesion.jpg"
+              alt="Imágenes de Dino Profesionales"
+            />
+            <div class="card-body">
+              <h3 class="text-center m-3 text-white">Dino Profesiones</h3>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#Modal01"
+                onclick="cargarProfecionales()"
+              >
+                Ver Imágenes
+              </button>
+            </div>
+          </div>
         </div>
-        <div
-          class="col-xs-12 col-sm-5 col-md-5 col-ig-3 card p-2 mx-auto"
-          id="tarjeta2"
-        >
-          <img src="./img/signos/0signos.jpg" alt="" />
-          <h3 class="text-center m-3 text-white">Dino Zodiaco</h3>
-          <button class="btn btn-primary">Ver</button>
+
+        <div class="col" id="tarjeta2">
+          <div class="card">
+            <img
+              src="./img/signos/0signos.jpg"
+              alt="Imágenes de Dino Signos del Zodiaco"
+            />
+            <div class="card-body">
+              <h3 class="text-center m-3 text-white">Dino Zodiaco</h3>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#Modal01"
+                onclick="cargarZodiaco()"
+              >Ver Imágenes</button>
+            </div>
+          </div>
         </div>
-        <div
-          class="col-xs-12 col-sm-5 col-md-5 col-ig-3 card p-2 mx-auto"
-          id="tarjeta3"
-        >
-          <img src="./img/musicos/0musicos.jpg" alt="" />
-          <h3 class="text-center m-3 text-white">Dino Músicos</h3>
-          <button class="btn btn-primary">Ver</button>
+        <div class="col" id="tarjeta3">
+          <div class="card">
+            <img
+              src="./img/musicos/0musicos.jpg"
+              alt="Imágenes de Dino Músicos"
+            />
+            <div class="card-body">
+              <h3 class="text-center m-3 text-white">Dino Músicos</h3>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#Modal01"
+                onclick="cargarMusicos()"
+              >Ver Imágenes</button>
+            </div>
+          </div>
         </div>
-        <div
-          class="col-xs-12 col-sm-5 col-md-5 col-ig-3 card p-2 mx-auto"
-          id="tarjeta4"
-        >
-          <img src="./img/deportes/0deportes.jpg" alt="" />
-          <h3 class="text-center m-3 text-white">Dino Deportes</h3>
-          <button class="btn btn-primary">Ver</button>
+        <div class="col" id="tarjeta4">
+          <div class="card">
+            <img
+              src="./img/deportes/0deportes.jpg"
+              alt="Imágenes de Dino Deportistas"
+            />
+            <div class="card-body">
+              <h3 class="text-center m-3 text-white">Dino Deportistas</h3>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#Modal01"
+                onclick="cargarDeportistas()"
+              >Ver Imágenes</button>
+            </div>
+          </div>
         </div>
-        <div
-          class="col-xs-12 col-sm-5 col-md-5 col-ig-3 card p-2 mx-auto"
-          id="tarjeta5"
-        >
-          <img src="./img/amor/0amor.jpg" alt="" />
-          <h3 class="text-center m-3 text-white">Dino Amor</h3>
-          <button class="btn btn-primary">Ver</button>
+        <div class="col" id="tarjeta5">
+          <div class="card">
+            <img src="./img/amor/0amor.jpg" alt="Imágenes de Dino Enamorados" />
+            <div class="card-body">
+              <h3 class="text-center m-3 text-white">Dino Amor</h3>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#Modal01"
+                onclick="cargarAmor()"
+              >
+                Ver Imágenes
+              </button>
+            </div>
+          </div>
         </div>
-        <div
-          class="col-xs-12 col-sm-5 col-md-5 col-ig-3 card p-2 mx-auto"
-          id="tarjeta6"
-        >
-          <img src="./img/varios/0varios.jpg" alt="" />
-          <h3 class="text-center m-3 text-white">Dino Varios</h3>
-          <button class="btn btn-primary">Ver</button>
+        <div class="col" id="tarjeta6">
+          <div class="card">
+            <img src="./img/varios/0varios.jpg" alt="Imágenes de Dino Varios" />
+            <div class="card-body">
+              <h3 class="text-center m-3 text-white">Dino Varios</h3>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#Modal01"
+                onclick="cargarVarios()"
+              >
+                Ver Imágenes
+              </button>
+            </div>
+          </div>
         </div>
       </section>
     </main>
 
-    <form class="container-fluid m-3" id="formulario">
-      <div class="row">
-        <label for="nombre" class="form-label">Nombre: </label>
-        <input type="text" class="form-control" id="nombre" />
-      </div>
-
-      <div class="row">
-        <label for="email" class="form-label">Email address</label>
-        <input
-          type="email"
-          class="form-control"
-          id="email"
-          aria-describedby="emailAyuda"
-        />
-        <div id="emailAyuda" class="form-text">
-          Ingrese su email si desea recibir novedades. Garantizamos no
-          compartirlo
+    <!-- Sección del Formulario de Votación -->
+    <section class="container-fluid"></section>
+    <form
+      class="row d-flex justify-content-center align-items-center m-3 p-2"
+      id="formulario"
+    >
+      <fieldset class="border">
+        <legend>Vote por el Arte que más le gustó.</legend>
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-6 col-ig-4 p-2 mx-auto">
+            <label for="nombre" class="form-label">Nombre: </label>
+            <input type="text" class="form-control" id="nombre" required />
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6 col-ig-4 p-2 mx-auto">
+            <label for="email" class="form-label">Email address</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              aria-describedby="emailAyuda"
+            />
+            <div class="row">
+              <div id="emailAyuda" class="form-text">
+                Ingrese su email si desea recibir novedades. Garantizamos no
+                compartirlo
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-      </div>
-      <button type="submit" class="btn btn-primary">Enviar</button>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+          <label class="form-check-label" for="exampleCheck1"
+            >Marca la casilla para que te enviemos por mail la dirección de
+            todas nuestras redes sociales</label
+          >
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-6 col-ig-4 p-2 mx-auto">
+            <select
+              class="form-select"
+              aria-label="Default select example"
+              required
+            >
+              <option selected>Seleccione una categoría</option>
+              <option value="1">Dino Profesiones</option>
+              <option value="2">Dino Zodiaco</option>
+              <option value="3">Dino Músicos</option>
+              <option value="4">Dino Deportistas</option>
+              <option value="5">Dino Amor</option>
+              <option value="6">Dino Varios</option>
+            </select>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6 col-ig-4 p-2 mx-auto">
+            <select
+              class="form-select"
+              aria-label="Default select example"
+              required
+            >
+              <option selected>Seleccione un Dino de la categoría</option>
+              <option value="1">Opción sin Cargar</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col d-flex justify-content-end align-items-center p-3">
+            <button type="reset" class="btn btn-warning">Borrar</button>
+          </div>
+          <div class="col d-flex justify-content-start align-items-center p-3">
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </div>
+        </div>
+      </fieldset>
     </form>
 
     <footer class="container-fluid bg-dark p-0">
-      <div class="row">
+      <div class="row" id="footerTop">
         <div
-          class="col-xs-0 col-sm-0 col-md-2 col-ig-3  d-flex justify-content-center align-items-center"
+          class="col-xs-0 col-sm-0 col-md-2 col-ig-3 d-flex justify-content-center align-items-center"
           id="logoFooter"
         >
           <img
             src="./img/footer/icon0.png"
             alt="Icono de dinosaurios"
             width="200px"
-            class=" d-none d-md-block img-fluid"
+            class="d-none d-md-block img-fluid"
+            id="logo-footer"
           />
         </div>
         <div
-          class="col-xs-12 col-sm-12 col-md-10 col-ig-9  p-0 m-0 d-flex justify-content-center align-items-center"
+          class="col-xs-12 col-sm-12 col-md-10 col-ig-9 p-0 m-0 d-flex justify-content-center align-items-center"
           id="socialNetworks"
         >
           <img
             src="./img/footer/fone.png"
-            alt="numero telefonico"
+            alt="numero telefónico"
             class="m-3 img-fluid"
           />
           <img
             src="./img/footer/mail.png"
-            alt="correo electronico"
+            alt="correo electrónico"
             class="m-3 img-fluid"
           />
           <img
@@ -293,15 +411,68 @@
           />
         </div>
       </div>
-      <div class="row">
+      <div class="row" id="footerButtom">
         <div class="col-12">
           <h2 class="text-white text-center" id="copyrights">
-            Autor: Patricio Arecco.
+            Autor: Patricio Esteban Arecco.
           </h2>
         </div>
       </div>
     </footer>
 
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="Modal01"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal Dino</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body" id="contenedorPadre">
+            <p>Mundo Dino</p>
+          </div>
+          <div class="modal-footer">
+            <!-- Botones -->
+            <button
+            type="button"
+            class="btn btn-info"
+            onclick="imagenAnterior()"
+          >
+            Anterior
+          </button>
+          <button
+          type="button"
+          class="btn btn-success"
+          onclick="imagenSiguiente()"
+        >
+          Siguiente
+        </button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+              onclick="cerrarModal()"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Script de funcionalidades locales -->
+    <script src="./script.js"></script>
     <!-- Importamos los scripts necesarios para el comportamiento del Sitio -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"

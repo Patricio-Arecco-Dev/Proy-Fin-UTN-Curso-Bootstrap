@@ -1,18 +1,63 @@
   @import url('https://fonts.googleapis.com/css2?family=Kablammo&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Kablammo&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-body{
-    background-color: #58B19F;
+  * {
+      box-sizing: border-box;
+  }
+
+  body {
+      background-color: #58B19F;
+      margin: 0px;
+      padding: 0px;
+  }
+
+  #cabecero {
+      max-height: 130px;
+  }
+
+  #logo-header {
+      max-height: 120px;
+      max-width: 120px;
+  }
+
+  #carrusel1 {
+      max-height: 600px;
+      max-width: 1200px;
+  }
+
+  div.card {
+      background-color: #2C3A47;
+  }
+
+  h1 {
+      font-family: Kablammo, sans-serif;
+      font-size: 7vw;
+      max-height: 100px;
+  }
+
+  h2 {
+      font-family: Kablammo, sans-serif;
+      font-size: 3vw;
+  }
+
+  h3 {
+    font-family: Kablammo, sans-serif;
+    font-size: 2vw;
 }
 
-div.card{
-    background-color: #2C3A47 ;
+#logo-footer {
+    max-height: 150px;
+    max-width: 150px;
 }
-h1{
-    font-family: Kablammo, sans-serif;
-    font-size: 96px !important;
-    font-weight: 900;
+
+#footerTop{
+    height: 150px;   
 }
-h2, h3{
-    font-family: Kablammo, sans-serif;
+
+#footerButtom{
+    height: 70px;
+}
+
+#elementoHijo{
+    width: 100%;
 }
